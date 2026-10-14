@@ -26,4 +26,6 @@ public class Produto {
     public void setNumero(int numero) { this.numero = numero; }
     public void setEstoque(int estoque) { this.estoque = estoque; }
 
+    public void exibirInfo(){ System.out.println("\nNome: " + nome + "\nNúmero: " + numero + "\nEstoque: " + estoque); }
+
 }

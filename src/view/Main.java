@@ -7,5 +7,5 @@ void main() {
             1,
             24);
 
-    System.out.println(produto);
+    produto.exibirInfo();
 }
