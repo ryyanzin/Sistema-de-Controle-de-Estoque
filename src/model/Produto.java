@@ -11,8 +11,8 @@ public class Produto {
     public Produto(String nome, int numero, int estoque) {
 
         this.nome = nome;
-        this.numero = numero;
-        this.estoque = estoque;
+        if(numero > 0)this.numero = numero;
+        if(estoque > 0)this.estoque = estoque;
 
     }
 
@@ -41,7 +41,7 @@ public class Produto {
         System.out.println("Quantos produtos deseja remover do estoque de " + nome + "?");
         int quantidade = scanner.nextInt();
 
-        if (quantidade >= 0) {
+        if (quantidade > 0) {
             estoque = estoque - quantidade;
             System.out.println("Estoque atualizado!\n");
         }

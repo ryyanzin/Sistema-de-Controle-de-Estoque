@@ -1,13 +1,12 @@
 import model.*;
+import java.util.Scanner;
 
 void main() {
 
-    Produto produto = new Produto(
-            "Arroz",
-            1,
-            24); //Cria um novo produto
+    Scanner scanner = new Scanner(System.in); //Exibe o menu
+    Estoque estoque = new Estoque();
 
-    Menu menu = new Menu(produto); // Cria um novo menu utilizando o produto como parametro
-    menu.exibirMenu(); //Exibe o menu
+    Menu menu = new Menu(scanner, estoque);
+    menu.exibirMenu(); //Cria um objeto menu e chama o metodo para exibir
 
 }
