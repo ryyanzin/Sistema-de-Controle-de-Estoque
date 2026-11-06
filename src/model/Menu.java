@@ -69,7 +69,10 @@ public class Menu {
                 System.out.println("Produto " + nome + " adicionado com sucesso!\n");
                 break;
             case 3:
-                System.out.println("Removendo produtos...\n");
+                System.out.println("Informe o número do produto que deseja remover:");
+                int numero1 = scanner.nextInt();
+                estoque.removerProduto(numero1);
+
                 break;
             case 0:
                 System.out.println("Voltando ao Menu Principal...\n");

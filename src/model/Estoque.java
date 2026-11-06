@@ -22,4 +22,21 @@ public class Estoque {
 
     }
 
+    public void removerProduto(int numero) {
+
+        Produto produtoEncontrado = null;
+
+        for (Produto produto : listaProdutos) {
+            if (produto.getNumero() == numero) produtoEncontrado = produto;
+        }
+
+        if (produtoEncontrado != null) {
+            listaProdutos.remove(produtoEncontrado);
+            System.out.println(produtoEncontrado.getNome() + " removido com sucesso!");
+        }
+
+        else { System.out.println("Produto não encontrado!"); }
+
+    }
+
 }
