@@ -102,7 +102,8 @@ void checarProduto(Produto produto) {
             System.out.println("1- Checar produto");
             System.out.println("2- Alterar nome");
             System.out.println("3- Alterar número");
-            System.out.println("4- Alterar estoque");
+            System.out.println("4- Adicionar estoque");
+            System.out.println("5- Remover estoque");
             System.out.println("0- Voltar");
             opcaoChecar = scanner.nextInt();
 
@@ -118,7 +119,10 @@ void checarProduto(Produto produto) {
                     System.out.println("Alterando número...");
                     break;
                 case 4:
-                    System.out.println("Alterando estoque...");
+                    produto.adicionarEstoque();
+                    break;
+                case 5:
+                    produto.removerEstoque();
                     break;
                 case 0:
                     System.out.println("Voltando ao Menu Controle de Produtos...");
