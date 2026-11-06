@@ -16,6 +16,17 @@ public class Estoque {
         }
     }
 
+    public Produto buscarProduto(int numero) {
+
+        for (Produto produto : listaProdutos) {
+            if (produto.getNumero() == numero) return produto;
+        }
+
+        System.out.println("Produto não encontrado!");
+        return null;
+
+    }
+
     public void adicionarProduto(Produto produto) {
 
         listaProdutos.add(produto);
@@ -37,6 +48,17 @@ public class Estoque {
 
         else { System.out.println("Produto não encontrado!"); }
 
+    }
+
+    public void exibirProduto() {
+
+        if(listaProdutos.isEmpty()) System.out.println("Nenhum produto cadastrado!");
+
+        else {
+            for (Produto produto : listaProdutos) {
+            produto.exibirInfo();
+            }
+        }
     }
 
 }

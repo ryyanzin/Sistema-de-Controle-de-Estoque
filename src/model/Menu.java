@@ -48,6 +48,7 @@ public class Menu {
         System.out.println("1- Listar Produtos");
         System.out.println("2- Adicionar Produto");
         System.out.println("3- Remover Produto");
+        System.out.println("4- Consultar Produto");
         System.out.println("0- Voltar");
         opcaoProduto = scanner.nextInt();
 
@@ -72,7 +73,12 @@ public class Menu {
                 System.out.println("Informe o número do produto que deseja remover:");
                 int numero1 = scanner.nextInt();
                 estoque.removerProduto(numero1);
-
+                break;
+            case 4:
+                System.out.println("Informe o número do produto que deseja consultar:");
+                int numero2 = scanner.nextInt();
+                Produto produtoEncontrado = estoque.buscarProduto(numero2);
+                checarProduto(produtoEncontrado);
                 break;
             case 0:
                 System.out.println("Voltando ao Menu Principal...\n");
@@ -83,6 +89,46 @@ public class Menu {
         }
 
     } while (opcaoProduto != 0);
+
+}
+
+void checarProduto(Produto produto) {
+
+        int opcaoChecar;
+
+        do {
+
+            System.out.println("Informações do produto " + produto.getNome() + ":");
+            System.out.println("1- Checar produto");
+            System.out.println("2- Alterar nome");
+            System.out.println("3- Alterar número");
+            System.out.println("4- Alterar estoque");
+            System.out.println("0- Voltar");
+            opcaoChecar = scanner.nextInt();
+
+            switch(opcaoChecar) {
+
+                case 1:
+                    estoque.exibirProduto();
+                    break;
+                case 2:
+                    System.out.println("Alterando nome...");
+                    break;
+                case 3:
+                    System.out.println("Alterando número...");
+                    break;
+                case 4:
+                    System.out.println("Alterando estoque...");
+                    break;
+                case 0:
+                    System.out.println("Voltando ao Menu Controle de Produtos...");
+                    break;
+                default:
+                    System.out.println("Opção inválida!");
+
+            }
+
+        } while (opcaoChecar != 0);
 
 }
 
