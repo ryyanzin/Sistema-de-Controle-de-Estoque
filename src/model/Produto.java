@@ -50,6 +50,34 @@ public class Produto {
 
     }
 
+    public void alterarNome() {
+
+        System.out.println("Qual nome deseja adicionar ao produto " + nome + "?");
+        String nomeAlterado = scanner.nextLine();
+
+        if (nomeAlterado != nome){
+            nome = nomeAlterado;
+            System.out.println("Nome alterado com sucesso!\n");
+        }
+
+        else System.out.println("Nome idêntico ao anterior.\n");
+
+    }
+
+    public void alterarNumero() {
+
+        System.out.println("Qual número deseja adicionar no produto " + nome + "?");
+        int numeroAlterado = scanner.nextInt();
+
+        if (numeroAlterado != numero && numeroAlterado > 0) {
+            numero = numeroAlterado;
+            System.out.println("Número do produto " + nome + " alterado com sucesso!\n");
+        }
+
+        else System.out.println("Número idêntico ao anterior ou inválido!\n");
+
+    }
+
     public void exibirInfo() { System.out.println("\nNome: " + nome + "\nNúmero: " + numero + "\nEstoque: " + estoque + "\n"); }
 
 }

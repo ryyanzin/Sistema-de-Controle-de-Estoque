@@ -84,7 +84,7 @@ public class Menu {
                 System.out.println("Voltando ao Menu Principal...\n");
                 break;
             default:
-                System.out.println("Opção inválida!");
+                System.out.println("Opção inválida!\n");
 
         }
 
@@ -113,10 +113,10 @@ void checarProduto(Produto produto) {
                     estoque.exibirProduto();
                     break;
                 case 2:
-                    System.out.println("Alterando nome...");
+                    produto.alterarNome();
                     break;
                 case 3:
-                    System.out.println("Alterando número...");
+                    produto.alterarNumero();
                     break;
                 case 4:
                     produto.adicionarEstoque();
@@ -125,10 +125,10 @@ void checarProduto(Produto produto) {
                     produto.removerEstoque();
                     break;
                 case 0:
-                    System.out.println("Voltando ao Menu Controle de Produtos...");
+                    System.out.println("Voltando ao Menu Controle de Produtos...\n");
                     break;
                 default:
-                    System.out.println("Opção inválida!");
+                    System.out.println("Opção inválida!\n");
 
             }
 
